@@ -3,8 +3,11 @@ package config
 import (
 	"context"
 	"log"
-	"github.com/sivasenthil09/netxd_project_config/constants"
 	"time"
+
+	"github.com/sivasenthil09/netxd_project_config/constants"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var MongoClient *mongo.Client
@@ -19,10 +22,7 @@ func ConnectDatabase() (*mongo.Client, error) {
 		log.Fatal(err.Error())
 		return nil, err
 	}
-	// if err := MongoClient.Ping(ctx); err != nil {
-	// 	log.Fatal(err.Error())
-	// 	return nil, err
-	// }
+
 
 	return MongoClient, nil
 }
