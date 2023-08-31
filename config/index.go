@@ -3,7 +3,7 @@ package config
 import (
 	"context"
 	"log"
-	"netxd_project_config/netxd_project_config/constants"
+	"github.com/sivasenthil09/netxd_project_config/constants"
 	"time"
 )
 
